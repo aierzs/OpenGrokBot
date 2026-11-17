@@ -1,0 +1,19 @@
+node_modules/
+dist/
+data/
+team.json
+.env
+*.log
+playground/
+demo-team.json
+demo-data/
+demo-workspace/
+
+# Local tooling, downloaded archives, and transient test state
+.local-tools/
+.download-cache/
+.queue-test-id
+.env.*
+!.env.example
+!.env.template
+*.tmp

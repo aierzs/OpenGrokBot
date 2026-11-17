@@ -1,0 +1,188 @@
+{
+  "company": "AI旅行体验群",
+  "owner": {
+    "id": "user",
+    "name": "你",
+    "title": "群主"
+  },
+  "workspace": "./demo-workspace",
+  "agents": [
+    {
+      "id": "planner",
+      "name": "策划",
+      "role": "行程策划",
+      "shape": "round",
+      "color": "#2f7ef5",
+      "provider": "claude",
+      "model": "claude-models,hy3",
+      "effort": "low",
+      "personality": "负责提出旅行方案和路线，先给出简洁方案。",
+      "tools": [],
+      "permissionMode": "dontAsk",
+      "mcpServers": [],
+      "inheritClaudeSettings": true,
+      "autoApproveTools": false,
+      "muted": false,
+      "approvals": "ask-all",
+      "scope": "travel itinerary and route planning"
+    },
+    {
+      "id": "budget",
+      "name": "预算",
+      "role": "预算顾问",
+      "shape": "round",
+      "color": "#16a085",
+      "provider": "claude",
+      "model": "claude-models,hy3",
+      "effort": "low",
+      "personality": "负责估算费用并指出预算假设。",
+      "tools": [],
+      "permissionMode": "dontAsk",
+      "mcpServers": [],
+      "inheritClaudeSettings": true,
+      "autoApproveTools": false,
+      "muted": false,
+      "approvals": "ask-all",
+      "scope": "travel cost and budget"
+    },
+    {
+      "id": "reviewer",
+      "name": "审阅",
+      "role": "体验审阅",
+      "shape": "round",
+      "color": "#e67e22",
+      "provider": "claude",
+      "model": "claude-models,hy3",
+      "effort": "low",
+      "personality": "负责检查行程的时间、交通和遗漏，给出具体改进。",
+      "tools": [],
+      "permissionMode": "dontAsk",
+      "mcpServers": [],
+      "inheritClaudeSettings": true,
+      "autoApproveTools": false,
+      "muted": false,
+      "approvals": "ask-all",
+      "scope": "travel itinerary critique"
+    },
+    {
+      "id": "glm53",
+      "name": "GLM 5.3",
+      "role": "AI 工具交流成员",
+      "shape": "round",
+      "color": "#5b8def",
+      "provider": "claude",
+      "model": "claude-models,glm-5.3",
+      "effort": "low",
+      "personality": "你是 GLM 5.3，在群里与其他成员讨论 AI 工具、模型和实际用法。看到新消息时只在有相关的新观点或具体纠正时回复；不需要回应就只输出 [skip]。中文简洁表达。",
+      "tools": [],
+      "permissionMode": "dontAsk",
+      "mcpServers": [],
+      "inheritClaudeSettings": true,
+      "autoApproveTools": false,
+      "muted": false,
+      "approvals": "ask-all",
+      "scope": "AI tools, models, coding assistants and practical workflows"
+    },
+    {
+      "id": "deepseekv4",
+      "name": "DeepSeek V4",
+      "role": "AI 工具交流成员",
+      "shape": "round",
+      "color": "#22aa88",
+      "provider": "claude",
+      "model": "claude-deepseek,deepseek-v4-pro",
+      "effort": "low",
+      "personality": "你是 DeepSeek V4，在群里与其他成员讨论 AI 工具、模型和实际用法。看到新消息时只在有相关的新观点或具体纠正时回复；不需要回应就只输出 [skip]。中文简洁表达。",
+      "tools": [],
+      "permissionMode": "dontAsk",
+      "mcpServers": [],
+      "inheritClaudeSettings": true,
+      "autoApproveTools": false,
+      "muted": false,
+      "approvals": "ask-all",
+      "scope": "AI tools, models, coding assistants and practical workflows"
+    },
+    {
+      "id": "hy",
+      "name": "HY",
+      "role": "AI 工具交流成员",
+      "shape": "round",
+      "color": "#b083ef",
+      "provider": "claude",
+      "model": "claude-models,hy3",
+      "effort": "low",
+      "personality": "你是HY，在群里与其他成员讨论问题。只在有新的观点或具体纠正时回复；没有需要补充的内容就只输出 [skip]。使用中文，简洁表达。",
+      "tools": [
+        "Read",
+        "Glob",
+        "Write",
+        "Edit",
+        "Grep",
+        "Bash",
+        "Task",
+        "WebSearch",
+        "WebFetch",
+        "NotebookEdit"
+      ],
+      "permissionMode": "dontAsk",
+      "mcpServers": [],
+      "inheritClaudeSettings": true,
+      "autoApproveTools": false,
+      "muted": false,
+      "approvals": "ask-all",
+      "scope": "AI tools, models, coding assistants and practical workflows"
+    },
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "role": "AI 工具交流成员",
+      "shape": "round",
+      "color": "#ef6b93",
+      "provider": "claude",
+      "model": "auto:doubao",
+      "effort": "low",
+      "personality": "你是豆包，在群里与其他成员讨论问题。只在有新的观点或具体纠正时回复；没有需要补充的内容就只输出 [skip]。使用中文，简洁表达。",
+      "tools": [],
+      "permissionMode": "dontAsk",
+      "mcpServers": [],
+      "inheritClaudeSettings": true,
+      "autoApproveTools": false,
+      "muted": false,
+      "approvals": "ask-all",
+      "scope": "AI tools, models, coding assistants and practical workflows"
+    }
+  ],
+  "providers": {
+    "claude": {
+      "kind": "claude",
+      "label": "Claude (subscription)"
+    }
+  },
+  "mcpServers": {},
+  "skills": {},
+  "settings": {
+    "maxMessagesPerRound": 6,
+    "maxTurnsPerAgentPerRound": 2,
+    "maxTurnsPerReply": 2,
+    "groupMode": "live",
+    "language": "auto",
+    "notifications": false,
+    "autoReview": [
+      {
+        "id": "f9816542",
+        "action": "allow",
+        "tool": "Write"
+      },
+      {
+        "id": "68837ee4",
+        "action": "allow",
+        "tool": "Bash"
+      },
+      {
+        "id": "2221fad6",
+        "action": "allow",
+        "tool": "Edit"
+      }
+    ]
+  }
+}
